@@ -1,5 +1,7 @@
 # webpack-scp-upload-plugin
 
+![](https://img.shields.io/npm/v/webpack-scp-upload-plugin.svg)
+
 > A webpack scp upload plugin webpack4.x
 
 ## Installation
