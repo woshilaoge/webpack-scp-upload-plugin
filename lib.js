@@ -19,7 +19,7 @@ class NodeSftp {
   init() {
     this.startTime = Date.now()
     console.log(colors.rainbow('\nStart upload, please wait...'))
-    this.upload(path.join(__dirname, this.options.local), this.options)
+    this.upload(path.join(this.options.local), this.options)
   }
 
   /**

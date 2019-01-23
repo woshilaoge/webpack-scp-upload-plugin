@@ -25,7 +25,7 @@ module.exports = {
       new WebpackScpUploadPlugin({
         host: '192.168.123.101',
         password: '****',
-        local: '/dist',
+        local: 'dist',
         path: '/home/www/demo',
         handleMode: true // 手动模式
       })
@@ -41,7 +41,7 @@ module.exports = {
 new WebpackScpUploadPlugin({
   host: '192.168.123.101',
   password: '****',
-  local: '/dist',
+  local: 'dist',
   path: '/home/www/demo'
 })
 ```
