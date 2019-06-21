@@ -1,6 +1,6 @@
 {
   "name": "webpack-scp-upload-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A webpack scp upload plugin",
   "main": "index.js",
   "scripts": {
