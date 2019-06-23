@@ -14,7 +14,7 @@ npm i -D webpack-scp-upload-plugin
 
 add following code to your webpack config file.
 
-> `vuecli3`
+#### `vuecli3`
 
 ```javascript
 const WebpackScpUploadPlugin = require('webpack-scp-upload-plugin')
@@ -25,7 +25,8 @@ module.exports = {
       new WebpackScpUploadPlugin({
         host: '192.168.123.101',
         password: '****',
-        local: 'dist',
+        username:'root', // 默认
+        local: 'dist', // 默认
         path: '/home/www/demo',
         handleMode: true // 手动模式
       })
@@ -61,7 +62,7 @@ npm run build:id
 npm run build
 # build完毕后，则不会自动上传，虽然webpack plugins配置了此插件，但此插件不会执行上传操作
 ```
-> `在项目上单独使用`
+####  `在项目上单独使用`
 示例
 ````js
 // 1. 在项目任意目录新建任意命名的.js文件 如 /upload.js (根目录 upload.js)
@@ -85,6 +86,19 @@ new ScpUpload({
 }
 
 npm run upload // 执行上传
+````
+#### `npm bin 运行`
+> 安装后会在`node_modules/.bin 注册 webpack-scp-upload` 命令
+示例
+````bash
+"scripts": {
+  "upload": "webpack-scp-upload --host=192.168.123.101 --password=124qwe path=/home/www/demo"
+}
+# 上传本地 dist 目录文件至服务器 /home/www/demo 目录
+npm run upload
+
+# 解析命令行参数 使用 yargs 模块 键值对的形式 也支持 --host 192.168.123.101(空格/=)
+# https://github.com/yargs/yargs/
 ````
 
 ## License

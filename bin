@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+console.log('=============启动文件上传==========')
+
+const { argv } = require('yargs')
+
+const ScpUpload = require('./lib')
+new ScpUpload(argv).init()
